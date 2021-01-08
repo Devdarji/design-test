@@ -1,20 +1,102 @@
-<ion-header [translucent]="true">
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-button class="btn-arrow">
+        <ion-icon name="arrow-back-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title slot="start"> Deposits </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button class="grid-icon">
+        <ion-icon name="grid"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <ion-card>
+          <ion-card-content>
+            <ion-list>
+              <ion-item lines="none">
+                <ion-label class="card-title">Enter Amount</ion-label>
+                <ion-select
+                  value="USD"
+                  class="options"
+                  okText="Okay"
+                  cancelText="Dismiss"
+                >
+                  <ion-select-option class="options" value="USD"
+                    >USD</ion-select-option
+                  >
+                  <ion-select-option class="options" value="RUPEES"
+                    >RUPEES</ion-select-option
+                  >
+                  <ion-select-option class="options" value="URO"
+                    >URO</ion-select-option
+                  >
+                  <ion-select-option class="options" value="YEN"
+                    >YEN</ion-select-option
+                  >
+                </ion-select>
+              </ion-item>
+            </ion-list>
+            <ion-item lines="none">
+              <h1>$ 3,500</h1>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+        <ion-item lines="none">
+          <p>MONTH</p>
+        </ion-item>
+
+        <div class="items">
+          <div class="item">3</div>
+          <div class="active-item">6</div>
+          <div class="item">9</div>
+          <div class="item">12</div>
+          <div class="item">15</div>
+          <div class="item">18</div>
+        </div>
+
+        <ion-item lines="none">
+          <p>INTEREST PAYMENT</p>
+        </ion-item>
+
+        <ion-grid>
+          <ion-row>
+            <ion-col size-md="3">
+              <ion-card class="card-css">
+                <ion-card-header>
+                  <ion-icon name="star-outline"></ion-icon>
+                </ion-card-header>
+                <h2 class="card-text">25.3%</h2>
+                <p class="card-p">Interest rate</p>
+              </ion-card>
+            </ion-col>
+
+            <ion-col size-md="3">
+              <ion-card class="card-css1">
+                <ion-card-header>
+                  <ion-icon name="cash-outline"></ion-icon>
+                </ion-card-header>
+                <h2 class="card-text1">17.7%</h2>
+                <p class="card-p1">Interest rate</p>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      
+        
+          <ion-button expand="block" color="primary" size="large"  shape="round" [disabled]="!isenabled">Calculate</ion-button>
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
